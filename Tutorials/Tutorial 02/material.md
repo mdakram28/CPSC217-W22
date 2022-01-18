@@ -1,4 +1,4 @@
-# Tutorial 1: Getting Started
+# Tutorial 2: Getting Started
 
 ---
 
