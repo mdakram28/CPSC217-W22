@@ -31,64 +31,67 @@ For opening the interactive learning course.
 
 ### 2. Intro to python
 
-	1. **Variables**
+1. **Variables**
 
-    - Variables allow us to store some data in the computers memory for later use.
+  - Variables allow us to store some data in the computers memory for later use.
 
-    - Variables are created with a name and can be accessed using that name later in the code. e.g.:
+  - Variables are created with a name and can be accessed using that name later in the code. e.g.:
 
-      ```python
-      my_variable = 123
-      ```
+    ```python
+    my_variable = 123
+    my_variable = 456
+    ```
 
-    - Variables are destroyed when the program terminates
+  - Variables are destroyed when the program terminates
 
-    - Variables can hold data of different types. eg:
+  - Variables can hold data of different types. eg:
 
-      ```python
-      # Integer 
-      a = 5
-      # Floating Point
-      b = 3.12
-      # String
-      s = "Custom String"
-      ```
+    ```python
+    # Integer 
+    a = 5
+    # Floating Point
+    b = 3.12
+    # String
+    s = "1.234"
+    s_as_num = float(s)
+    ```
 
-	2. **Expressions**
+2. **Expressions**
 
-    - An expression is a combination of values, variables, operators, operands, and calls to functions which evaluate to some result during execution.
-    - Expressions can appear at the right hand side of variable assignment. In that case the result of the expression is stored in the variable.
-    - Operators: +, -, *, /, ** (exponentiation), // (integer division), % (remainder)
-    - e.g.
-      - `1+2`
-      - `(2*a) + (3*b)`
+   - An expression is a combination of values, variables, operators, operands, and calls to functions which evaluate to some result during execution.
+   - Expressions can appear at the right hand side of variable assignment. In that case the result of the expression is stored in the variable.
+   - Operators: +, -, *, /, ** (exponentiation), // (integer division), % (remainder)
+   - e.g.
+     - `1+2`
+     - `(2*a) + (3*b)`
 
-	3. **IO**
+3. **IO**
 
-    - Input: Take input from the user using the in built input() function. e.g.:
+   - Input: Take input from the user using the in built input() function. e.g.:
 
-      ```python
-      user_name = input("Enter your name")
-      ```
+     ```python
+     user_name = input("Enter your name")
+     ```
 
-    - Output: Print using the in built print() function. e.g.: 
+   - Output: Print using the in built print() function. e.g.: 
 
-      ```python
-      print("Welcome to CPSC 217")
-      print("The user's name is", user_name)
-      ```
+     ```python
+     print("Welcome to CPSC 217", "Good Morning")
+     print("The user's name is", user_name)
+     ```
 
-	4. **Casting**
+4. **Casting**
 
-    - In order to convert from one data type to another we use casting functions in python: **int(), float(), str(), bool()**, etc
+   - In order to convert from one data type to another we use casting functions in python: **int(), float(), str()**, etc
 
-    - When we call the input() function, it evalutes to a string data type. If we need to take in floating point input we will have to wrap the input() function inside a float() casting function. e.g.:
+   - When we call the input() function, it evalutes to a string data type. If we need to take in floating point input we will have to wrap the input() function inside a float() casting function. e.g.:
 
-      ```python
-      number = float(input("Enter a number"))
-      ```
+     ```python
+     number = float(input("Enter a number"))
+     ```
 
-      
+
+​      
 
 ---
 
@@ -96,18 +99,22 @@ For opening the interactive learning course.
 
 Write a python program to 
 
-1. Get the current temperature in farenheit from the user
-2. Convert it to celcius
+1. Get the current temperature in fahrenheit from the user
+2. Convert it to celsius
 3. Print the converted temperature
 
 $$
 C = \frac{(F - 32) * 5}{9}
 $$
 
+**Solution**
 
+```python
+# 1. Get the current temperature in fahrenheit from the user
+temp_f = float(input("Enter the temperature in fahrenheit: "))
+# 2. Convert it to celsius
+temp_c = ((temp_f - 32) * 5) / 9
+# 3. Print the converted temperature
+print("Temperature in celsius:", temp_c)
+```
 
----
-
-### 4. Intro to Assignment 1
-
-D2l > CPSC 217 > Content > Assignment 1
