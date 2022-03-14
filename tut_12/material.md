@@ -2,7 +2,7 @@
 
 ---
 
-### Date: March 6, 2021
+### Date: March 7, 2021
 
 ### Email: mohdakram.ansari@ucalgary.ca
 
@@ -173,8 +173,8 @@ odd[0] = 1
 # odd: [1, 4, 6, 8]
 
 # Add an item
-odd.append(999)
-# odd: [1, 4, 6, 8, 999]
+odd.append([999, 55])
+# odd: [1, 4, 6, 8, [999, 55]]
 ```
 
 ### Iterating Through a List
@@ -187,5 +187,7 @@ for fruit in fruits:
 length = len(fruits)
 for i in range(len(fruits)):
   print(fruits[i]) 
+
 ```
 
+---

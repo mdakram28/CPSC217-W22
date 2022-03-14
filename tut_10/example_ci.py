@@ -1,3 +1,6 @@
+
+
+
 def compound_interest(principal, rate, time):
     """This function will return the compound interest on the principal amount"""
     amount = principal * (pow((1 + rate / 100), time))
