@@ -17,32 +17,9 @@ def check_player_won():
     If no player has won it returns None
     """
 
-    # Checking horizontal
-    for r in range(3):
-        if board[r][0] == board[r][1] == board[r][2] == X:
-            return 1
-        elif board[r][0] == board[r][1] == board[r][2] == O:
-            return 2
+    # Write the code to check which player has won here
 
-    # Checking Vertical
-    for c in range(3):
-        if board[0][c] == board[1][c] == board[2][c] == X:
-            return 1
-        elif board[0][c] == board[1][c] == board[2][c] == O:
-            return 2
-
-    # Diagonal 1
-    if board[0][0] == board[1][1] == board[2][2] == X:
-        return 1
-    elif board[0][0] == board[1][1] == board[2][2] == O:
-        return 2
-
-    # Diagonal 2
-    if board[0][2] == board[1][1] == board[2][0] == X:
-        return 1
-    elif board[0][2] == board[1][1] == board[2][0] == O:
-        return 2
-
+    # Return None if no player has won
     return None
 
 def print_board():
@@ -57,12 +34,10 @@ def print_board():
             print(" ├───┼───┼───┤")
     print(" └───┴───┴───┘")
 
-def play_turn(player_num):
+
+def play_turn(player):
     global board
-    if player_num%2 == 1:
-        print("Player 1's turn")
-    else:
-        print("Player 2's turn")
+    print("Player {} turn".format(player))
 
     r = int(input("Enter row: "))
     c = int(input("Enter col: "))
@@ -71,11 +46,7 @@ def play_turn(player_num):
         r = int(input("Enter row: "))
         c = int(input("Enter col: "))
 
-
-    if player_num%2 == 1:
-        board[r][c] = X
-    else:
-        board[r][c] = O
+    board[r][c] = player
 
 def main():
     player_won = None
@@ -84,15 +55,13 @@ def main():
     # Play game until a player has won or the board has been filled
     while player_won is None and turn <= 9:
         print_board()
-        play_turn(turn)
+        play_turn(X if turn%2 == 1 else O)
         player_won = check_player_won()
         turn += 1
 
     # Check win or draw
-    if player_won == 1:
-        print("PLAYER 1 WON THE GAME!")
-    elif player_won == 2:
-        print("PLAYER 2 WON THE GAME!")
+    if player_won is not None:
+        print("PLAYER {} WON THE GAME!".format(player_won))
     else:
         print("DRAW!")
 

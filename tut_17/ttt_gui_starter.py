@@ -20,28 +20,9 @@ def check_player_won():
     If no player has won it returns None
     """
 
-    # Checking horizontal
-    for r in range(3):
-        if board[r][0] == board[r][1] == board[r][2]:
-            if board[r][0] != _:
-                return board[r][0]
+    # Write the code to check which player has won here
 
-    # Checking Vertical
-    for c in range(3):
-        if board[0][c] == board[1][c] == board[2][c]:
-            if board[0][c] != _:
-                return board[0][c]
-
-    # Diagonal 1
-    if board[0][0] == board[1][1] == board[2][2]:
-        if board[0][0] != _:
-            return board[0][0]
-
-    # Diagonal 2
-    if board[0][2] == board[1][1] == board[2][0]:
-        if board[0][2] != _:
-            return board[0][2]
-
+    # Return None if no player has won
     return None
 
 props_btn = {
