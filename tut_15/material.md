@@ -1,6 +1,8 @@
-# Tutorial 15
-
 ---
+marp: true
+---
+
+# Tutorial 15
 
 ### Date: March 16, 2021
 
@@ -24,7 +26,7 @@ Hence, in Python, a file operation takes place in the following order:
 2. Read or write (perform operation)
 3. Close the file
 
-
+---
 ### Opening Files in Python
 
 
@@ -41,6 +43,7 @@ f = open("test.txt",'w')  # write in text mode
 2. `w`: Opens a file for writing. 
 Creates a new file if it does not exist or truncates the file if it exists.
 
+---
 ### Closing Files in Python
 
 ```python
@@ -49,6 +52,7 @@ f = open("test.txt", encoding = 'utf-8')
 f.close()
 ```
 
+---
 ### Writing to Files in Python
 
 ```python
@@ -62,6 +66,7 @@ f.write("contains three lines\n")
 f.close()
 ```
 
+---
 ### Reading Files in Python
 
 ```python
@@ -75,7 +80,7 @@ for line in f:
 > In this program, the lines in the file itself include a newline character \n. 
 > So, we use the end parameter of the print() function to avoid two newlines when printing.
 
-
+---
 ## 2. Error Handling
 
 Python uses the try-except-finally block to control exceptions.
@@ -97,6 +102,7 @@ except:
 print("This will always be printed")
 ```
 
+---
 ### Handling file IO errors
 
 File IO can crash due to many reasons.
@@ -115,7 +121,7 @@ except OSError:
     sys.exit(1)
 
 ```
-
+---
 ### Exercise
 
 Write a python program to read tic-tac-toe board from

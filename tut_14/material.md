@@ -66,3 +66,25 @@ $ python example_arg.py arg 1234 test 43.0
 Write a program to calculate the average of all 
 numbers passed as argument to the python program.
 Expect all arguments to be integers.
+
+```python
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
