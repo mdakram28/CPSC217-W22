@@ -1,9 +1,9 @@
 # Introduction
-### Author? - Akram Ansari (https://mdakram.com/)
+### Author - Akram Ansari (https://mdakram.com/)
 
 I teach Python to university students. This article is meant to teach the basics to programming using python to an absolute beginner with no programming experience. After following this article you will be able to understand and write your own intermediate level python code.
 
-The source code for the examplesand exercise solutions can be found in the repo : https://github.com/mdakram28/CPSC217-W22.
+The source code for the examples and exercise solutions can be found in the repo: https://github.com/mdakram28/CPSC217-W22.
 
 ### How to follow the course?
 Try to run the code given as examples and also attempt to solve the exercises. Complete a minimum of 1 chapter per day. Do not. Cover the material at the suggested pace along with exercises to get maximum retention of the concepts.
@@ -929,6 +929,20 @@ print(5 not in numbers)
 Make a program to count the number of each letter in a word entered by the user.
 Print the frequency as a dictionary
 
+```python
+
+frequency = {}
+word = input("Enter a word ")
+for letter in word:
+    if letter in frequency:
+        frequency[letter] += 1
+    else:
+        frequency[letter] = 1
+
+print(frequency)
+
+```
+
 ## 2. Lists
 
 A list in python is a sequence of zero or more elements of any data type (including lists itself).
@@ -1095,7 +1109,17 @@ numbers passed as argument to the python program.
 Expect all arguments to be integers.
 
 ```python
+import sys
 
+num_args = len(sys.argv) - 1
+total = 0
+
+for i in range(1, num_args+1):
+    total += int(sys.argv[i])
+
+average = total / num_args
+
+print("Average = {}".format(average))
 
 ```
 
@@ -1228,6 +1252,27 @@ except OSError:
 Write a python program to read tic-tac-toe board from
 a text file and print the content of box at some
 row, column entered by the user.
+
+
+```python
+try:
+    f = open("tic-tac-toe.txt", "r")
+
+    r = int(input("Enter row: "))
+    c = int(input("Enter column: "))
+
+    line = ""
+    for i in range(r):
+        line = f.readline()
+
+    box = line[c-1]
+    print("Content of box at {},{} : '{}'".format(r, c, box))
+
+    f.close()
+except OSError:
+    print("Failed to open file")
+
+```
 
 ---
 
