@@ -11,6 +11,8 @@ Try to run the code given as examples and also attempt to solve the exercises. C
 
 # Table of Contents
 
+> Some tutorial numbers are intentionally missing to match the tutorial numbers from the github respository.
+
 1. Tutorial 1: Setup
 2. Tutorial 2: Getting Started
     1. Running python code
